@@ -1,0 +1,123 @@
+.logo-review {
+  min-height: 100vh;
+  background: var(--color-paper);
+}
+
+.logo-review-header {
+  width: min(calc(100% - 3rem), 1040px);
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-inline: auto;
+  border-bottom: 1px solid var(--color-line);
+  font-size: 0.75rem;
+}
+
+.logo-review-header a {
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.logo-review-header span,
+.logo-review-status {
+  color: var(--color-muted);
+}
+
+.logo-review-main {
+  width: min(calc(100% - 3rem), 1040px);
+  margin: 0 auto;
+  padding-block: clamp(2.5rem, 7vw, 5rem);
+}
+
+.logo-review-main h1 {
+  margin-top: 1rem;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+}
+
+.logo-review-intro {
+  max-width: 56ch;
+  margin-top: 1.25rem;
+  color: var(--color-muted);
+}
+
+.logo-review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.logo-review-sample {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: clamp(1.15rem, 3vw, 2rem);
+  border: 1px solid var(--color-line);
+  background: var(--color-white);
+}
+
+.logo-review-sample h2 {
+  margin-top: 0.4rem;
+  font-size: 1.35rem;
+}
+
+.logo-review-sample > p:last-child {
+  max-width: 38ch;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+}
+
+.logo-review-nav-surface,
+.logo-review-one-color-surface {
+  width: 100%;
+  min-height: 7rem;
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.logo-review-nav-surface {
+  border: 1px solid var(--color-line);
+  background: var(--color-paper);
+}
+
+.logo-review-nav-logo {
+  width: 175px;
+  height: 32px;
+}
+
+.logo-review-one-color-surface {
+  min-height: 7rem;
+  background: var(--color-accent);
+}
+
+.logo-review-large-logo {
+  width: min(100%, 260px);
+  height: auto;
+}
+
+.logo-review-status {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+}
+
+@media (width <= 680px) {
+  .logo-review-header,
+  .logo-review-main {
+    width: calc(100% - 2rem);
+  }
+
+  .logo-review-header {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 0.8rem;
+  }
+
+  .logo-review-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
