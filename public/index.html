@@ -5,35 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="An unfinished, neutral T-shirt storefront for the IS117 Brand Studio. Build a brand through deliberate, visible design choices."
+      content="Everyday makes simple T-shirts for everyday wear. Explore the white T-shirt and find a style that feels like you."
     />
-    <title>Your Brand — neutral storefront starter</title>
+    <title>Everyday — made simple</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="styles.css" />
     <script src="shop.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <aside class="starter-notice" aria-label="Starter information">
+    <aside class="brand-note" aria-label="Everyday brand note">
       <span
-        ><strong>Unfinished by design.</strong> This is a neutral teaching
-        starter. Replace its identity after your brand decisions.</span
+        ><strong>Everyday, made simple.</strong> One white T-shirt, room for
+        your point of view.</span
       >
-      <a href="studio.html"
-        >Enter the studio <span aria-hidden="true">↗</span></a
+      <a href="styleguide.html"
+        >Our approach <span aria-hidden="true">↗</span></a
       >
     </aside>
     <header class="site-header wrap">
-      <a
-        class="brand-link"
-        href="index.html"
-        aria-label="Your Brand storefront home"
+      <a class="brand-link" href="index.html" aria-label="Everyday home"
         ><img
           class="wordmark"
-          src="assets/wordmark.svg"
-          alt="Neutral starter wordmark"
+          src="assets/everyday-daily-fold.svg"
+          alt="Everyday, with the Daily Fold mark"
           width="175"
-          height="26"
+          height="32"
       /></a>
       <nav class="main-nav" aria-label="Main navigation">
         <a class="nav-link" href="index.html" aria-current="page">Shop</a>
@@ -51,7 +48,7 @@
       <section class="product-section wrap" aria-labelledby="product-title">
         <div class="product-visual">
           <div class="visual-label">
-            <span>001 / The starting point</span><span>Unbranded</span>
+            <span>Everyday / 001</span><span>The white T-shirt</span>
           </div>
           <img
             class="shirt-image"
@@ -68,15 +65,13 @@
         </div>
         <div class="product-information">
           <p class="eyebrow">
-            <span class="status-dot" aria-hidden="true"></span> Neutral product
-            / demo only
+            <span class="status-dot" aria-hidden="true"></span> The Everyday
+            edit / demo
           </p>
           <h1 id="product-title">The white<br />T-shirt.</h1>
-          <p class="product-intro">A plain shirt. A place to begin.</p>
+          <p class="product-intro">Everyday, made simple.</p>
           <p class="muted product-description">
-            This starter has a working product page and room for a brand. Its
-            audience, personality, message, and visual direction are still yours
-            to decide.
+            Comfortable, simple T-shirts for everyday wear.
           </p>
           <div class="price-row">
             <p class="price">$28 <span>USD</span></p>
@@ -128,15 +123,65 @@
               <dd>White</dd>
             </div>
             <div>
-              <dt>Brand identity</dt>
-              <dd>Not decided yet</dd>
+              <dt>Brand</dt>
+              <dd>Everyday</dd>
             </div>
             <div>
-              <dt>Product claims</dt>
-              <dd>None supplied</dd>
+              <dt>Details</dt>
+              <dd>Sample product information</dd>
             </div>
           </dl>
         </div>
+      </section>
+
+      <section
+        class="brand-principles wrap"
+        aria-label="Everyday styling ideas"
+      >
+        <article class="styling-note" aria-labelledby="styling-note-title">
+          <p class="eyebrow">A little, for free</p>
+          <h2 id="styling-note-title">A simple styling idea.</h2>
+          <p class="styling-tip-copy">
+            Start with the plain white tee and pieces you already enjoy wearing.
+          </p>
+        </article>
+        <section class="style-choice" aria-labelledby="style-choice-title">
+          <p class="eyebrow">Your call / optional</p>
+          <h2 id="style-choice-title">How do you want to wear it?</h2>
+          <p class="field-help">
+            Pick a direction to see a matching idea. Your choice is not saved.
+          </p>
+          <div
+            class="style-choice-options"
+            role="group"
+            aria-label="Style direction"
+          >
+            <button
+              class="button button-secondary style-choice-button"
+              type="button"
+              data-style-choice="understated"
+              aria-pressed="false"
+            >
+              Keep it understated
+            </button>
+            <button
+              class="button button-secondary style-choice-button"
+              type="button"
+              data-style-choice="expressive"
+              aria-pressed="false"
+            >
+              Add a little expression
+            </button>
+          </div>
+          <p
+            id="style-suggestion"
+            class="style-choice-suggestion"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+            hidden
+          ></p>
+        </section>
       </section>
 
       <section
@@ -167,31 +212,13 @@
           </p>
         </div>
       </section>
-
-      <section class="starter-next wrap" aria-labelledby="next-title">
-        <p class="eyebrow">For the person building this site</p>
-        <h2 id="next-title">The shirt stays.<br />The story is your work.</h2>
-        <div>
-          <p>
-            Choose who this is for, decide what the brand should express, and
-            make those choices visible. Keep the storefront and its
-            <a href="styleguide.html">live style guide</a> in sync.
-          </p>
-          <a class="button button-secondary" href="studio.html"
-            >See the studio brief <span aria-hidden="true">↗</span></a
-          >
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer wrap">
-      <p>
-        IS117 Brand Studio <span class="footer-separator"> / </span> Neutral
-        starter
-      </p>
-      <p class="footer-tagline">Fictional product. Real design decisions.</p>
-      <a href="https://github.com/kaw393939/is117-brand-studio#readme"
-        >Project README <span aria-hidden="true">↗</span></a
+      <p>Everyday <span class="footer-separator"> / </span> Daily Fold</p>
+      <p class="footer-tagline">A simple starting point for every day.</p>
+      <a href="styleguide.html"
+        >The Everyday approach <span aria-hidden="true">↗</span></a
       >
     </footer>
   </body>

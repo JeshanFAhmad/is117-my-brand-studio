@@ -2,10 +2,10 @@
 
 AI-drafted task evidence, not a transcript or grade. This file may be public: review, correct or remove excerpts before commit/push. Use short actual quotes or labeled paraphrases and disclose help. Approval alone is not an explanation; leave missing evidence pending.
 
-- **Feature:** BRAND-001 — scope agreed; implementation pending
+- **Feature:** BRAND-001 — scope agreed; instructor-directed storefront implementation applied; learner review pending
 - **Date:** 2026-10-29
 - **Conversation context available:** Current and immediately preceding turns; baseline report is learner-provided.
-- **Review status:** Earlier excerpt confirmed accurate on 2026-10-29; this brief/preview update has not yet been reviewed.
+- **Review status:** Earlier excerpt confirmed accurate on 2026-10-29; the current AI implementation/check summary has not been reviewed.
 
 ## Student contributions
 
@@ -21,7 +21,7 @@ AI-drafted task evidence, not a transcript or grade. This file may be public: re
 
 ## AI work and evidence links
 
-- **Work performed by AI:** Read project coaching/specification and assessment guidance; researched and visually inspected the cited V&A objects; created and inspected two isolated static hero explorations with shared copy and the same shirt; drafted an original Daily Fold SVG and isolated logo review page; proposed two Cialdini applications. The logo and persuasion proposals have not been applied to the storefront.
-- **SPEC, issue/PR, actual checks and artifacts:** [SPEC.md](SPEC.md); [issue #1](https://github.com/JeshanFAhmad/is117-my-brand-studio/issues/1); branch `feature/brand-001-first-branded-storefront`; [Preview A](public/explorations/everyday-modernist.html); [Preview B](public/explorations/everyday-postmodernist.html). Targeted formatting, HTML, and CSS lint passed. Chromium Playwright at 1440x1000 and 375x812 confirmed matching copy/image, font choices, working action, and no overflow; axe reported zero violations for its selected WCAG tags. These automated and AI observations do not establish audience fit. The earlier full check stopped at baseline Prettier errors in 32 files.
+- **Work performed by AI:** Read project coaching/specification and assessment guidance; created the saved previews and Daily Fold logo; implemented the saved identity, shared design tokens, and both approved styling interactions in the storefront and live guide. No new learner choice or rationale was added.
+- **SPEC, issue/PR, actual checks and artifacts:** [SPEC.md](SPEC.md); [issue #1](https://github.com/JeshanFAhmad/is117-my-brand-studio/issues/1); branch `feature/brand-001-first-branded-storefront`; [storefront](public/index.html), [shared CSS](public/styles.css), [live guide](public/styleguide.html), and [browser tests](tests/browser/studio.spec.js). Changed-code Prettier, direct ESLint/HTML Validate/Stylelint, and `npm.cmd test` (7 tests) passed; `npm.cmd run test:e2e` passed (12 tests), including responsive and axe checks. `npm.cmd run check` remains blocked by pre-existing formatting warnings in seven files; `npm.cmd run lint` has a pre-existing Windows single-quoted-glob failure. Automated checks are not a learner observation or evidence of brand fit.
 
-**Next step:** The two persuasion proposals are approved and recorded in SPEC.md; before applying them to the live storefront, pause for the learner's visitor-benefit explanation or make only a clearly labeled reversible example. The Daily Fold SVG still awaits review; direction A remains a preference only.
+**Next step:** Learner review of the rendered logo and page, browser impression, keyboard/mobile observations, and explanation of one actual check remain pending. The visitor-benefit explanation is also not yet evidenced; direction A remains a preference, not a final learner choice. No commit or PR was made.

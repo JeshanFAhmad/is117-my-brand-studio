@@ -1,11 +1,10 @@
-/* Shared brand tokens. Change these after you agree on your brand direction.
-   Both the storefront and the live style guide use this file. */
+/* Everyday's shared system powers both the storefront and live guide. */
 :root {
-  --color-paper: #f6f5f0;
+  --color-paper: #f7f7f3;
   --color-ink: #171a18;
-  --color-muted: #5a615b;
-  --color-line: #d1d5cc;
-  --color-accent: #e3ef56;
+  --color-muted: #56605a;
+  --color-line: #c9cec6;
+  --color-accent: #e2e8de;
   --color-soft: #e8eae1;
   --color-white: #fff;
   --color-danger: #992e28;
@@ -179,7 +178,7 @@ p + p {
   transform: translateY(0);
 }
 
-.starter-notice {
+.brand-note {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -190,7 +189,7 @@ p + p {
   line-height: 1.5;
 }
 
-.starter-notice a {
+.brand-note a {
   flex-shrink: 0;
   font-weight: 650;
 }
@@ -209,7 +208,7 @@ p + p {
 }
 
 .wordmark {
-  width: 150px;
+  width: 175px;
   height: auto;
 }
 
@@ -507,6 +506,60 @@ legend {
   text-align: right;
 }
 
+.brand-principles {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-block: 3.5rem;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.styling-note {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--color-soft);
+}
+
+.styling-note h2,
+.style-choice h2 {
+  margin-top: 0.8rem;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+.styling-tip-copy {
+  max-width: 34ch;
+  margin-top: 1rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.style-choice .field-help {
+  max-width: 48ch;
+  margin-top: 0.75rem;
+}
+
+.style-choice-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+.style-choice-button[aria-pressed="true"] {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.style-choice-suggestion {
+  max-width: 48ch;
+  margin-top: 1.2rem;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid var(--color-ink);
+  background: var(--color-soft);
+  font-size: 0.85rem;
+}
+
 .bag-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -562,28 +615,6 @@ legend {
 .bag-details .field-help {
   margin-top: 0.4rem;
   font-size: 0.69rem;
-}
-
-.starter-next {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem 3rem;
-  background: var(--color-accent);
-  padding: 2.7rem 3rem 3rem;
-  margin-block: 1rem 4rem;
-}
-
-.starter-next > .eyebrow {
-  grid-column: 1 / -1;
-}
-
-.starter-next > div {
-  max-width: 470px;
-  font-size: 0.86rem;
-}
-
-.starter-next .button {
-  margin-top: 1.6rem;
 }
 
 .site-footer {
@@ -722,6 +753,17 @@ legend {
   margin-top: 0.5rem;
 }
 
+.persuasion-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0;
+}
+
+.persuasion-example {
+  color: var(--color-ink) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5;
+}
+
 .decision-grid .undecided {
   font-size: 1.5rem;
   font-weight: 450;
@@ -768,8 +810,7 @@ legend {
 }
 
 .logo-mono {
-  width: 190px;
-  filter: brightness(0);
+  width: 260px;
 }
 
 .logo-variant p,
@@ -950,7 +991,7 @@ legend {
     width: calc(100% - 4rem);
   }
 
-  .starter-notice {
+  .brand-note {
     padding-inline: 2rem;
   }
 
@@ -1003,17 +1044,17 @@ legend {
     width: calc(100% - 2.5rem);
   }
 
-  .starter-notice {
+  .brand-note {
     padding: 0.75rem 1.25rem;
     font-size: 0.67rem;
     gap: 1rem;
   }
 
-  .starter-notice > span {
+  .brand-note > span {
     max-width: 480px;
   }
 
-  .starter-notice a {
+  .brand-note a {
     font-size: 0.65rem;
   }
 
@@ -1026,7 +1067,7 @@ legend {
   }
 
   .wordmark {
-    width: 130px;
+    width: 140px;
   }
 
   .main-nav {
@@ -1101,15 +1142,10 @@ legend {
     margin-top: 0.6rem;
   }
 
-  .starter-next {
+  .brand-principles {
     grid-template-columns: 1fr;
-    padding: 1.8rem;
-    gap: 1.3rem;
-    margin-block: 1rem 3rem;
-  }
-
-  .starter-next > div {
-    max-width: none;
+    gap: 2rem;
+    padding-block: 2.5rem;
   }
 
   .site-footer {
@@ -1203,7 +1239,7 @@ legend {
 }
 
 @media (width <= 420px) {
-  .starter-notice {
+  .brand-note {
     align-items: start;
     flex-direction: column;
     gap: 0.35rem;
@@ -1249,6 +1285,10 @@ legend {
 
   .decision-grid p:last-child {
     grid-column: 2;
+  }
+
+  .persuasion-grid > div {
+    display: block;
   }
 
   .palette-grid {
