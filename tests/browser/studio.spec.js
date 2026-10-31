@@ -36,6 +36,54 @@ test("positive: a shopper can choose sizes, add items, and empty the demo bag", 
   await expect(page.locator("#bag-count")).toHaveText("0");
 });
 
+test("optional style choice shows a matching idea without changing the bag", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const understated = page.getByRole("button", {
+    name: "Keep it understated",
+  });
+  const expressive = page.getByRole("button", {
+    name: "Add a little expression",
+  });
+  const suggestion = page.locator("#style-suggestion");
+
+  await expect(suggestion).toBeHidden();
+  await understated.click();
+  await expect(understated).toHaveAttribute("aria-pressed", "true");
+  await expect(expressive).toHaveAttribute("aria-pressed", "false");
+  await expect(suggestion).toHaveText(
+    "Keep it easy: pair the white tee with pieces you already enjoy wearing.",
+  );
+  await expect(page.locator("#bag-count")).toHaveText("0");
+
+  await expressive.click();
+  await expect(understated).toHaveAttribute("aria-pressed", "false");
+  await expect(expressive).toHaveAttribute("aria-pressed", "true");
+  await expect(suggestion).toHaveText(
+    "Try the white tee with a color or pattern you already like.",
+  );
+  await page.reload();
+  await expect(page.locator("#style-suggestion")).toBeHidden();
+});
+
+test("style guide uses the Everyday logo and live color tokens", async ({
+  page,
+}) => {
+  await page.goto("/styleguide.html");
+  await expect(page.locator(".wordmark")).toHaveAttribute(
+    "src",
+    "assets/everyday-daily-fold.svg",
+  );
+  await expect(page.locator('[data-color-token="--color-paper"]')).toHaveText(
+    "#f7f7f3",
+  );
+  await expect(page.locator('[data-color-token="--color-ink"]')).toHaveText(
+    "#171a18",
+  );
+  await expect(page.locator(".persuasion-grid > div")).toHaveCount(2);
+});
+
 test("keyboard: the skip link reaches main and the size controls work without a mouse", async ({
   page,
 }) => {

@@ -58,4 +58,21 @@
       "Your demo bag is empty. Choose a size to try it again.";
     form.querySelector('input[name="size"]:checked')?.focus();
   });
+
+  const styleChoices = document.querySelectorAll("[data-style-choice]");
+  const styleSuggestion = document.querySelector("#style-suggestion");
+  if (!styleSuggestion) return;
+
+  styleChoices.forEach((choice) => {
+    choice.addEventListener("click", () => {
+      const understated = choice.dataset.styleChoice === "understated";
+      styleChoices.forEach((option) => {
+        option.setAttribute("aria-pressed", String(option === choice));
+      });
+      styleSuggestion.textContent = understated
+        ? "Keep it easy: pair the white tee with pieces you already enjoy wearing."
+        : "Try the white tee with a color or pattern you already like.";
+      styleSuggestion.hidden = false;
+    });
+  });
 })();
