@@ -1,5 +1,7 @@
 # IS117 Brand Studio
 
+# Website Link: https://github.com/JeshanFAhmad/is117-my-brand-studio
+
 **The same white T-shirt can carry very different meanings.** Develop a brand for it with an AI collaborator, then make those decisions visible in a professional website and a live style guide.
 
 This template starts with a working, deliberately neutral storefront. Your audience, name, promise, logo, voice, and visual direction are **not chosen yet**. You make the decisions; the agent helps you explore, build, check, and revise them.
